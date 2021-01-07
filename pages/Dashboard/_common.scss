@@ -1,0 +1,65 @@
+@import "../../styles/media";
+@import "../../styles/variable";
+
+@mixin dashboardCommon ($class) { 
+  .#{$class} { 
+    padding: 30px 130px;
+    background: $silverGradient;
+
+    @include media(1000px) {
+      & {
+        padding: 30px 70px;
+      }
+    }
+    @include media(800px) {
+      & {
+        padding: 30px 50px;
+      }
+    }
+    @include xl-mobile {
+      & {
+        padding: 30px 19px;
+      }
+    }
+    @include md-mobile {
+      & {
+        padding: 30px 10px;
+      }
+    }
+  }
+
+  .toggleLinks {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    button {
+      font-size: .9rem;
+      padding: 7px 25px;
+      background: #b8c2d47d;
+    }
+
+    button:last-child {
+      margin-left:  10px;
+    }
+  }
+
+  .quickLinkCards {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    @include lg-mobile {
+      & {
+        padding: 13px;
+        overflow-x: scroll;
+        justify-content: flex-start;
+      }
+    }
+  }
+
+  .subjectCards {
+    margin-top: 19px;
+    padding: 30px 0px;
+  }
+  @content
+}

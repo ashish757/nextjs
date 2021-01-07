@@ -1,0 +1,76 @@
+@import "../../../styles/media";
+@import "../../../styles/variable";
+
+.hero {
+  height: 60vh;
+  width: 100%;
+  background: #040e52;
+  // #bfd7cc
+  display: flex;
+  font-family:  sans-serif;
+  align-items: center;
+  .heroInfo {
+    padding-left: 30px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    .title {
+      font-size: 4rem;
+    }
+    .subtitle {
+      color: #afafaf;
+      margin: 0px 0px 10px;
+      font-style: italic;
+    }
+    .heroText {
+       color: #cfcfcf;
+      margin: 10px 0px 10px;
+    }
+    .callToAction{
+      margin-top: 10px;
+      button:nth-child(1) {
+        margin-right: 19px;
+      }
+      button {
+        font-size: 1.3rem;
+        font-weight: 600;
+        // padding: ;
+      }
+    }
+  }
+ 
+
+  @include xl-mobile {
+    & {
+      padding-left: 10px;
+      padding-left: 10px;
+    }
+    .heroInfo {
+      padding-left: 10px;
+      .title {
+        font-size: 3rem;
+      }
+    }
+  }
+  @include lg-mobile {
+    & {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+    .heroImg {
+      display: none;
+    }
+    .heroInfo {
+      .callToAction{
+        button:nth-child(1) {
+          margin-right: 10px;
+        }
+        button {
+          font-size: 1.19rem;
+        }
+      }
+    }
+  }
+  
+}
+

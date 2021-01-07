@@ -1,0 +1,82 @@
+@import "../../../styles/media";
+.quickStart {
+    background: linear-gradient(17deg, #f7ead6, #f7e9d6, #9abeb1);
+     text-align: center;
+    > h1 {
+        color: transparent;
+        background: linear-gradient(to right, #ff2ec4 19%, #6802ee);
+        background-clip: text;
+        background-clip: text;
+        font-weight: 800;
+        font-size: 3rem;
+    }
+    .examType {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 30px;
+
+        .neet, .jee {
+            display: flex;
+            flex-direction: column;
+
+            .neetCards,
+            .jeeCards {
+                margin-top: 10px;
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+                grid-auto-rows: 190px;
+                justify-content: center;
+                grid-gap: 30px;
+            }
+        }
+    } 
+
+    
+    @include media (1040px) {
+        & {
+            padding-left: 30px;
+            padding-right: 30px;
+            background: linear-gradient(59deg, #f5e8d5, #f4e8d5, #d0d6c5);
+        }
+    }
+    @include lg-mobile {
+        & {
+            padding-left: 10px;
+            padding-right: 10px;
+            > h1 {
+                font-size: 1.4rem;
+            }
+        }
+        .neetCards,
+        .jeeCards {
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)) !important;
+        }
+    }
+    @include md-mobile {
+        .examType {
+            grid-gap: 15px;
+        }
+    }
+    @include sm-mobile {
+        .examType {
+            grid-gap: 15px;
+        }
+        .neetCards,
+        .jeeCards {
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)) !important;
+        }
+    }
+}
+
+.card {
+    background: #f7e9d6;
+    border-radius: 6px;
+    box-shadow: 8px 8px 9px 0px #efddc3, -9px -6px 9px 0px #fdf2e2;
+    padding-top: 1rem;
+    
+    @include md-mobile {
+        button {
+            font-size: .7rem;
+        }
+    }
+}
