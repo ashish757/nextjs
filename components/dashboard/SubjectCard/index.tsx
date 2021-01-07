@@ -15,7 +15,7 @@ export default function index({ url, title, Icon }: propType) {
         { id: 'maths', icon: Calc },
         { id: 'chemistry', icon: Atom },
     ]
-    const [I] = icons.filter(icon => {
+    const [I]: any = icons.filter(icon => {
         return icon.id === title.toLowerCase()
     })
     
