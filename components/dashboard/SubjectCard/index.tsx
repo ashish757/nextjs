@@ -24,7 +24,7 @@ export default function index({ url, title, Icon }: propType) {
         <div className={styles.card}>
             <div className={styles.info}>
                 {
-                    Icon ? <Icon /> : <I.icon />
+                    Icon ? <Icon /> : <Flask />
                 }
  
                 <h3>{ title }</h3>
